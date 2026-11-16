@@ -145,8 +145,10 @@ def process_filing(raw_html: bytes, ticker: str = "", source: str = "") -> Filin
 def save_filing(filing: Filing, out_dir: Path) -> Path:
     out_dir.mkdir(parents=True, exist_ok=True)
     path = out_dir / f"{filing.doc_id}.json.gz"
-    with gzip.open(path, "wt", encoding="utf-8") as fh:
-        json.dump(filing.to_json(), fh, ensure_ascii=False)
+    payload = json.dumps(filing.to_json(), ensure_ascii=False, sort_keys=True).encode("utf-8")
+    # mtime=0 keeps the archive byte-identical across rebuilds (clean git diffs).
+    with path.open("wb") as raw, gzip.GzipFile(fileobj=raw, mode="wb", mtime=0) as fh:
+        fh.write(payload)
     return path
 
 

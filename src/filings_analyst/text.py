@@ -41,7 +41,7 @@ _ABBREV = [
     "a.m.",
 ]
 _PLACEHOLDER = "․"  # one-dot leader: looks like a period, never a sentence end
-_SPLIT = re.compile(r"(?<=[.!?”])\s+(?=[\"“(]?[A-Z0-9•])")
+_SPLIT = re.compile(r"(?<=[.!?”])\s+(?=[\"“(]?[A-Z0-9•\[])")
 _TOKEN = re.compile(r"[a-z0-9]+(?:[.'][a-z0-9]+)*")
 STOPWORDS = frozenset(
     [
