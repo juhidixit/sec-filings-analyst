@@ -69,6 +69,7 @@ class Answer:
     sources: list[Source]
     checks: list[ClaimCheck] = field(default_factory=list)
     removed_claims: list[str] = field(default_factory=list)
+    notes: list[str] = field(default_factory=list)
 
     @property
     def supported_ratio(self) -> float:
@@ -264,6 +265,7 @@ class Analyst:
                     f" a {abs(change):.1f}% {word} [3]."
                 )
         # Restatement check: does a later filing show a different number for the same period?
+        ans_notes: list[str] = []
         for f in cands:
             later = f.financials[metric].get(target)
             if f is primary or later is None or f.fiscal_year <= primary.fiscal_year:
@@ -281,11 +283,17 @@ class Analyst:
                     )
                 )
                 text += (
-                    f" Note: the later {f.label} 10-K presents this period as "
-                    f"{human_money(later, metric)}, a restated or recast figure (for example after a "
-                    f"stock split) [{n}]."
+                    f" The later {f.label} 10-K presents {metric} for this period as "
+                    f"{human_money(later, metric)} [{n}]."
                 )
-        return Answer(question, text, "structured", "xbrl", [primary.doc_id], src)
+                ans_notes.append(
+                    f"Restatement detected: the {f.label} 10-K reports a different {metric} for the "
+                    f"period ending {target} (for example after a stock split or recast). "
+                    "The as-reported figure is shown first."
+                )
+        ans = Answer(question, text, "structured", "xbrl", [primary.doc_id], src)
+        ans.notes = ans_notes
+        return ans
 
     # -- main entry point ------------------------------------------------------
     def ask(self, question: str, k: int = 3, strict: bool = False) -> Answer:
