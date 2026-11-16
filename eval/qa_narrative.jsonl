@@ -1,0 +1,36 @@
+{"id": "nvda-1", "question": "Which NVIDIA chips are affected by the US licensing requirements for exports to China?", "doc": "NVDA-10-K-FY2025", "gold": "A100.*H100|H100.*A100"}
+{"id": "nvda-2", "question": "How could export controls cause customers to design out NVIDIA products?", "doc": "NVDA-10-K-FY2025", "gold": "design-out"}
+{"id": "nvda-3", "question": "What does NVIDIA say about long manufacturing lead times and estimating customer demand?", "doc": "NVDA-10-K-FY2025", "gold": "lead time"}
+{"id": "nvda-4", "question": "Who manufactures NVIDIA's wafers?", "doc": "NVDA-10-K-FY2025", "gold": "TSMC|Taiwan Semiconductor|foundr"}
+{"id": "nvda-5", "question": "What did NVIDIA disclose in fiscal 2023 about the COVID-19 pandemic?", "doc": "NVDA-10-K-FY2023", "gold": "COVID"}
+{"id": "nvda-6", "question": "What does NVIDIA say about climate change and its business?", "doc": "NVDA-10-K-FY2025", "gold": "climate"}
+{"id": "orcl-1", "question": "What would happen if Oracle can no longer provide hosting services to TikTok?", "doc": "ORCL-10-K-FY2025", "gold": "TikTok"}
+{"id": "orcl-2", "question": "What is Oracle's investment in Ampere and the SoftBank deal?", "doc": "ORCL-10-K-FY2025", "gold": "Ampere"}
+{"id": "orcl-3", "question": "Why did Oracle's cash used for investing activities increase in fiscal 2025?", "doc": "ORCL-10-K-FY2025", "gold": "capital expenditures"}
+{"id": "orcl-4", "question": "What risks does Oracle see in its AI products?", "doc": "ORCL-10-K-FY2025", "gold": "\\bAI\\b"}
+{"id": "orcl-5", "question": "What risks come from Oracle's acquisitions?", "doc": "ORCL-10-K-FY2025", "gold": "Acquisitions present|integrat"}
+{"id": "orcl-6", "question": "How does Oracle describe the risks of securing data center capacity?", "doc": "ORCL-10-K-FY2025", "gold": "data center capacity"}
+{"id": "orcl-7", "question": "What does Oracle say about its outstanding indebtedness?", "doc": "ORCL-10-K-FY2025", "gold": "indebtedness"}
+{"id": "tsla-1", "question": "Where is Tesla building its next Gigafactory?", "doc": "TSLA-10-K-FY2024", "gold": "Monterrey"}
+{"id": "tsla-2", "question": "What is Tesla's AI training cluster called?", "doc": "TSLA-10-K-FY2024", "gold": "Cortex"}
+{"id": "tsla-3", "question": "Which partner produces battery cells for Tesla at Gigafactory Nevada?", "doc": "TSLA-10-K-FY2024", "gold": "Panasonic"}
+{"id": "tsla-4", "question": "What are Tesla's obligations related to Gigafactory New York and SUNY?", "doc": "TSLA-10-K-FY2024", "gold": "Research Foundation|Gigafactory New York"}
+{"id": "tsla-5", "question": "How dependent is Tesla on Elon Musk?", "doc": "TSLA-10-K-FY2024", "gold": "Musk"}
+{"id": "tsla-6", "question": "What happens if Tesla's suppliers fail to deliver components on schedule?", "doc": "TSLA-10-K-FY2024", "gold": "suppliers? (may )?fail|deliver components"}
+{"id": "aapl-1", "question": "What changes has Apple made to comply with the EU Digital Markets Act?", "doc": "AAPL-10-K-FY2024", "gold": "Digital Markets Act|DMA"}
+{"id": "aapl-2", "question": "How much of the App Store revenue do developers keep?", "doc": "AAPL-10-K-FY2024", "gold": "developers keep"}
+{"id": "aapl-3", "question": "Where are Apple's products manufactured?", "doc": "AAPL-10-K-FY2024", "gold": "outsourcing partners"}
+{"id": "aapl-4", "question": "What does Apple say about foreign currency exchange rates?", "doc": "AAPL-10-K-FY2024", "gold": "exchange rate"}
+{"id": "aapl-5", "question": "How does Apple describe competition in its markets?", "doc": "AAPL-10-K-FY2024", "gold": "highly competitive"}
+{"id": "c-1", "question": "What did the OCC find about Citibank's progress on the 2020 Consent Order?", "doc": "C-10-K-FY2024", "gold": "sufficient and sustainable progress"}
+{"id": "c-2", "question": "What civil money penalty orders were entered against Citi in July 2024?", "doc": "C-10-K-FY2024", "gold": "Civil Money Penalty"}
+{"id": "c-3", "question": "What does Citi plan for its Mexico consumer business?", "doc": "C-10-K-FY2024", "gold": "IPO|Mexico"}
+{"id": "c-4", "question": "What risks does Citi face from its remaining operations in Russia?", "doc": "C-10-K-FY2024", "gold": "Russia"}
+{"id": "c-5", "question": "Why is Citi susceptible to cyberattacks?", "doc": "C-10-K-FY2024", "gold": "size and scale|high-profile"}
+{"id": "c-6", "question": "What did Citi say in 2022 about the transition away from LIBOR?", "doc": "C-10-K-FY2022", "gold": "LIBOR"}
+{"id": "c-7", "question": "How do regulatory capital requirements affect Citi's ability to return capital to shareholders?", "doc": "C-10-K-FY2024", "gold": "return capital"}
+{"id": "jpm-1", "question": "How do higher interest rates affect JPMorgan's net interest income?", "doc": "JPM-10-K-FY2024", "gold": "net interest income"}
+{"id": "jpm-2", "question": "What could happen if JPMorgan fails to comply with laws and regulations?", "doc": "JPM-10-K-FY2024", "gold": "enforcement|fines|penalt|sanction"}
+{"id": "jpm-3", "question": "How might fintech competitors gain an advantage over JPMorgan?", "doc": "JPM-10-K-FY2024", "gold": "financial technology|non-traditional"}
+{"id": "jpm-4", "question": "What does JPMorgan say about its liquidity being impaired?", "doc": "JPM-10-K-FY2024", "gold": "impair"}
+{"id": "jpm-5", "question": "What are JPMorgan's EU and UK climate supervisory expectations?", "doc": "JPM-10-K-FY2024", "gold": "climate"}

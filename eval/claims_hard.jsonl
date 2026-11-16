@@ -1,0 +1,30 @@
+{"evidence_sid": "ORCL-10-K-FY2025#475", "claim": "Customer, partner or employee mistakes or misconduct could lead to improper access to Oracle Cloud Services.", "unsupported": false, "note": "paraphrase"}
+{"evidence_sid": "ORCL-10-K-FY2025#475", "claim": "Oracle Cloud Services have been accessed improperly by a contractor.", "unsupported": true, "note": "possibility stated as fact"}
+{"evidence_sid": "NVDA-10-K-FY2023#740", "claim": "A significant portion of NVIDIA's US-taxable income qualifies for preferential FDII treatment.", "unsupported": false, "note": "paraphrase"}
+{"evidence_sid": "NVDA-10-K-FY2023#740", "claim": "Most of NVIDIA's income is taxable outside the United States.", "unsupported": true, "note": "location inverted"}
+{"evidence_sid": "NVDA-10-K-FY2023#431", "claim": "Incorrect demand estimates for new use cases can make NVIDIA's revenue or supply volatile.", "unsupported": false, "note": "paraphrase"}
+{"evidence_sid": "NVDA-10-K-FY2023#431", "claim": "NVIDIA's demand estimates for new use cases have been consistently accurate.", "unsupported": true, "note": "contradiction without negation word"}
+{"evidence_sid": "NVDA-10-K-FY2025#258", "claim": "NVIDIA measures employee engagement with pulse surveys, a suggestion box and an anonymous third-party platform.", "unsupported": false, "note": "paraphrase"}
+{"evidence_sid": "NVDA-10-K-FY2025#258", "claim": "NVIDIA measures employee engagement with quarterly in-person interviews.", "unsupported": true, "note": "fabricated method"}
+{"evidence_sid": "C-10-K-FY2024#212", "claim": "Citi builds some software in-house and also depends on third-party applications that can be exploited.", "unsupported": false, "note": "paraphrase"}
+{"evidence_sid": "C-10-K-FY2024#212", "claim": "Citi develops all of its software in-house.", "unsupported": true, "note": "overgeneralisation"}
+{"evidence_sid": "NVDA-10-K-FY2025#581", "claim": "Acquisitions could hurt NVIDIA's ability to grow and could negatively affect its financial results.", "unsupported": false, "note": "paraphrase"}
+{"evidence_sid": "NVDA-10-K-FY2025#581", "claim": "Acquisitions will improve NVIDIA's ability to grow its business.", "unsupported": true, "note": "polarity reversed by wording"}
+{"evidence_sid": "TSLA-10-K-FY2024#587", "claim": "Tesla's Fremont Factory and Gigafactory Nevada sit in seismically active regions, and Gigafactory Shanghai is in a flood-prone area.", "unsupported": false, "note": "paraphrase"}
+{"evidence_sid": "TSLA-10-K-FY2024#587", "claim": "Tesla's Gigafactory Shanghai is located in a seismically active region.", "unsupported": true, "note": "attribute swapped between entities"}
+{"evidence_sid": "TSLA-10-K-FY2024#587", "claim": "Gigafactory Berlin is located in a flood-prone area.", "unsupported": true, "note": "entity swap within company"}
+{"evidence_sid": "NVDA-10-K-FY2025#43", "claim": "NVIDIA targets four markets: Data Center, Gaming, Professional Visualization and Automotive.", "unsupported": false, "note": "paraphrase"}
+{"evidence_sid": "NVDA-10-K-FY2025#43", "claim": "NVIDIA targets five markets, including Data Center and Gaming.", "unsupported": true, "note": "count changed as a word"}
+{"evidence_sid": "NVDA-10-K-FY2023#62", "claim": "NVIDIA's networking products include InfiniBand and Ethernet adapters, switches, software and cables.", "unsupported": false, "note": "paraphrase"}
+{"evidence_sid": "NVDA-10-K-FY2023#62", "claim": "NVIDIA's networking products include InfiniBand adapters and optical transceivers it manufactures itself.", "unsupported": true, "note": "added detail"}
+{"evidence_sid": "ORCL-10-K-FY2025#283", "claim": "He founded Oracle in June 1977 and was CEO until September 2014.", "unsupported": false, "note": "paraphrase"}
+{"evidence_sid": "ORCL-10-K-FY2025#283", "claim": "He founded Oracle in June 1977 and was CEO until September 2004.", "unsupported": true, "note": "wrong year"}
+{"evidence_sid": "ORCL-10-K-FY2024#633", "claim": "A long US federal government shutdown could delay approvals and hurt Oracle's results.", "unsupported": false, "note": "paraphrase"}
+{"evidence_sid": "ORCL-10-K-FY2024#633", "claim": "A US federal government shutdown would speed up approvals and decision making.", "unsupported": true, "note": "reversed effect"}
+{"evidence_sid": "NVDA-10-K-FY2023#433", "claim": "Natural disasters or pandemics such as COVID-19 can cause supply constraints that extend lead times.", "unsupported": false, "note": "paraphrase"}
+{"evidence_sid": "NVDA-10-K-FY2023#433", "claim": "COVID-19 shortened NVIDIA's lead times.", "unsupported": true, "note": "reversed effect"}
+{"evidence_sid": "TSLA-10-K-FY2024#224", "claim": "Tesla made the pledge to advance a common platform for electric vehicles.", "unsupported": false, "note": "paraphrase"}
+{"evidence_sid": "TSLA-10-K-FY2024#224", "claim": "Tesla made the pledge to protect its patents from competitors making electric vehicles.", "unsupported": true, "note": "wrong motive"}
+{"evidence_sid": "ORCL-10-K-FY2025#96", "claim": "Oracle usually charges a prepaid fee that is drawn down as customers consume OCI services.", "unsupported": false, "note": "paraphrase"}
+{"evidence_sid": "ORCL-10-K-FY2025#96", "claim": "Oracle charges for OCI services only in arrears after they are consumed.", "unsupported": true, "note": "contradiction"}
+{"evidence_sid": "C-10-K-FY2024#259", "claim": "Citi uses models to analyze and monitor the risks it takes on.", "unsupported": false, "note": "paraphrase"}

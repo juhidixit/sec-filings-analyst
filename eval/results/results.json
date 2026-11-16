@@ -1,0 +1,405 @@
+{
+  "corpus": {
+    "filings": 9,
+    "sentences": 7261,
+    "risk_factors": 260
+  },
+  "retrieval": {
+    "n_questions": 36,
+    "bm25": {
+      "hit@1": 0.806,
+      "hit@3": 0.917,
+      "hit@5": 0.944,
+      "mrr": 0.863,
+      "median_latency_ms": 3.2
+    },
+    "tfidf": {
+      "hit@1": 0.833,
+      "hit@3": 0.861,
+      "hit@5": 0.917,
+      "mrr": 0.861,
+      "median_latency_ms": 3.3
+    },
+    "hybrid": {
+      "hit@1": 0.806,
+      "hit@3": 0.861,
+      "hit@5": 0.917,
+      "mrr": 0.847,
+      "median_latency_ms": 3.0
+    },
+    "scope_accuracy": 1.0,
+    "per_question": [
+      {
+        "id": "nvda-1",
+        "rank": null,
+        "top1": "There are also now licensing requirements to export a wide array of products, including networking products, destined for certain end users and for certain end "
+      },
+      {
+        "id": "nvda-2",
+        "rank": 1,
+        "top1": "Excessive or shifting export controls have already and may in the future encourage customers outside China and other impacted regions to “design-out” certain U."
+      },
+      {
+        "id": "nvda-3",
+        "rank": 1,
+        "top1": "Long manufacturing lead times and uncertain supply and component availability, combined with a failure to estimate customer demand accurately, has led and could"
+      },
+      {
+        "id": "nvda-4",
+        "rank": 4,
+        "top1": "Cost of revenue consists primarily of the cost of semiconductors, including wafer fabrication, assembly, testing and packaging, board and device costs, manufact"
+      },
+      {
+        "id": "nvda-5",
+        "rank": 1,
+        "top1": "We supported our people and their families in making their health and safety a top priority during fiscal year 2023 and throughout the COVID-19 pandemic to keep"
+      },
+      {
+        "id": "nvda-6",
+        "rank": 1,
+        "top1": "We also face risks related to business trends that may be influenced by climate change concerns."
+      },
+      {
+        "id": "orcl-1",
+        "rank": 1,
+        "top1": "If the prohibition is lifted or expires without a resolution that satisfies relevant legal requirements, we may no longer be able to provide those services to T"
+      },
+      {
+        "id": "orcl-2",
+        "rank": 1,
+        "top1": "If the Ampere Acquisition does not close, we will continue to be exposed to the risk associated with our investments in Ampere as discussed above."
+      },
+      {
+        "id": "orcl-3",
+        "rank": 1,
+        "top1": "Net cash used for investing activities increased by $14.4 billion in fiscal 2025 relative to fiscal 2024 primarily due to the increase in capital expenditures."
+      },
+      {
+        "id": "orcl-4",
+        "rank": 1,
+        "top1": "In addition, AI technologies are rapidly changing and present evolving legal, regulatory and ethical issues, including claims of bias, discrimination, a perceiv"
+      },
+      {
+        "id": "orcl-5",
+        "rank": 2,
+        "top1": "However, our strategic acquisition program carries several risks, including but not limited to:"
+      },
+      {
+        "id": "orcl-6",
+        "rank": 1,
+        "top1": "If we underestimate customer demand or our data center capacity needs, we may face shortages of available infrastructure, limiting our ability to support custom"
+      },
+      {
+        "id": "orcl-7",
+        "rank": 1,
+        "top1": "There are risks associated with our outstanding and future indebtedness."
+      },
+      {
+        "id": "tsla-1",
+        "rank": 2,
+        "top1": "We are focused on growing our manufacturing capacity, which includes capacity for manufacturing newer vehicle models such as our Cybertruck, Tesla Semi and futu"
+      },
+      {
+        "id": "tsla-2",
+        "rank": 1,
+        "top1": "We believe our capabilities and advancements in AI, including the deployment of Cortex, our training cluster at Gigafactory Texas, differentiates us from our co"
+      },
+      {
+        "id": "tsla-3",
+        "rank": 1,
+        "top1": "Our plan to grow the volume and profitability of our vehicles and energy storage products depends on significant lithium-ion battery cell production, including "
+      },
+      {
+        "id": "tsla-4",
+        "rank": 1,
+        "top1": "We must manage ongoing obligations under our agreement with the Research Foundation for the State University of New York relating to our Gigafactory New York."
+      },
+      {
+        "id": "tsla-5",
+        "rank": 1,
+        "top1": "We are highly dependent on the services of Elon Musk, Technoking of Tesla and our Chief Executive Officer."
+      },
+      {
+        "id": "tsla-6",
+        "rank": 1,
+        "top1": "Our suppliers may fail to deliver components according to schedules, prices, quality and volumes that are acceptable to us, or we may be unable to manage these "
+      },
+      {
+        "id": "aapl-1",
+        "rank": 1,
+        "top1": "The Company has also implemented changes to iOS, iPadOS, the App Store and Safari® in the European Union (“EU”) as it seeks to comply with the Digital Markets A"
+      },
+      {
+        "id": "aapl-2",
+        "rank": 1,
+        "top1": "For the vast majority of applications, developers keep all of the revenue they generate on the App Store."
+      },
+      {
+        "id": "aapl-3",
+        "rank": 1,
+        "top1": "The Company depends on component and product manufacturing and logistical services provided by outsourcing partners, many of which are located outside of the U."
+      },
+      {
+        "id": "aapl-4",
+        "rank": 1,
+        "top1": "The Company’s exposure to foreign exchange rate risk relates primarily to the Company being a net receiver of currencies other than the U.S. dollar."
+      },
+      {
+        "id": "aapl-5",
+        "rank": 4,
+        "top1": "The Company faces substantial competition in these markets from companies that have significant technical, marketing, distribution and other resources, as well "
+      },
+      {
+        "id": "c-1",
+        "rank": 1,
+        "top1": "The OCC found that Citibank had failed to make sufficient and sustainable progress toward achieving compliance with its 2020 Consent Order."
+      },
+      {
+        "id": "c-2",
+        "rank": 1,
+        "top1": "Additionally, on July 10, 2024, the FRB entered into a Civil Money Penalty Consent Order with Citigroup, and the OCC entered into a Civil Money Penalty Consent "
+      },
+      {
+        "id": "c-3",
+        "rank": 1,
+        "top1": "Citi’s simplification actions also include completing its remaining divestitures, including the planned IPO of Mexico Consumer/SBMM."
+      },
+      {
+        "id": "c-4",
+        "rank": 1,
+        "top1": "In addition, Citi’s remaining operations in Russia subject Citi to various other risks, including foreign currency volatility, such as appreciations or devaluat"
+      },
+      {
+        "id": "c-5",
+        "rank": 1,
+        "top1": "Citi is also susceptible to cyberattacks given, among other things, its size and scale, high-profile brand, global footprint and prominent role in the financial"
+      },
+      {
+        "id": "c-6",
+        "rank": 1,
+        "top1": "See “Managing Global Risk—Other Risks—LIBOR Transition Risk” for Citi’s ongoing actions to prepare for the transition away from LIBOR."
+      },
+      {
+        "id": "c-7",
+        "rank": 1,
+        "top1": "Citi’s Ability to Return Capital to Common Shareholders Substantially Depends on Regulatory Capital Requirements, Including the Results of the CCAR Process and "
+      },
+      {
+        "id": "jpm-1",
+        "rank": 1,
+        "top1": "When interest rates are high or increasing, JPMorganChase can generally be expected to earn higher net interest income."
+      },
+      {
+        "id": "jpm-2",
+        "rank": null,
+        "top1": "Data quality is essential to JPMorganChase’s business and operations, and if JPMorganChase fails to maintain adequate data management processes, this could adve"
+      },
+      {
+        "id": "jpm-3",
+        "rank": null,
+        "top1": "New competitors in the financial services industry continue to emerge, including firms that offer products and services solely through the internet and non-fina"
+      },
+      {
+        "id": "jpm-4",
+        "rank": 1,
+        "top1": "JPMorganChase’s ability to operate its businesses could be impaired if its liquidity is constrained."
+      },
+      {
+        "id": "jpm-5",
+        "rank": 1,
+        "top1": "The Firm’s banking entities in the EU and the U.K. are subject to supervisory expectations published by the ECB and the PRA, respectively, addressing bank strat"
+      }
+    ]
+  },
+  "verifier": {
+    "n_cases": 1072,
+    "n_by_kind": {
+      "faithful_verbatim": 120,
+      "inserted_negation": 120,
+      "wrong_evidence": 120,
+      "flipped_direction": 120,
+      "faithful_subspan": 120,
+      "swapped_entity": 120,
+      "wrong_number": 120,
+      "wrong_year": 120,
+      "faithful_rounded": 112
+    },
+    "verifier": {
+      "precision": 1.0,
+      "recall": 0.994,
+      "f1": 0.997
+    },
+    "baseline_lexical_overlap": {
+      "precision": 1.0,
+      "recall": 0.167,
+      "f1": 0.286
+    },
+    "accuracy_by_kind": {
+      "faithful_rounded": 1.0,
+      "faithful_subspan": 1.0,
+      "faithful_verbatim": 1.0,
+      "flipped_direction": 1.0,
+      "inserted_negation": 1.0,
+      "swapped_entity": 1.0,
+      "wrong_evidence": 1.0,
+      "wrong_number": 0.967,
+      "wrong_year": 1.0
+    },
+    "baseline_accuracy_by_kind": {
+      "faithful_rounded": 1.0,
+      "faithful_subspan": 1.0,
+      "faithful_verbatim": 1.0,
+      "flipped_direction": 0.0,
+      "inserted_negation": 0.0,
+      "swapped_entity": 0.0,
+      "wrong_evidence": 1.0,
+      "wrong_number": 0.0,
+      "wrong_year": 0.0
+    },
+    "error_examples": [
+      {
+        "kind": "wrong_number",
+        "claim": "Term Loan Credit Agreements: On June 6, 2024, we terminated the Term Loan Credit Agreement and repaid the principal amount outstanding together with interest accrued up to the date of repayment.",
+        "reasons": []
+      },
+      {
+        "kind": "wrong_number",
+        "claim": "Notes 7, 8, 13 and 16 of Notes to Consolidated Financial Statements included elsewhere in this Annual Report include additional information regarding our most material contractual obligations and contingencies.",
+        "reasons": []
+      },
+      {
+        "kind": "wrong_number",
+        "claim": "In June 2025, our Board declared a quarterly cash dividend of $0.50 per share of our outstanding common stock payable on July 24, 2025 to stockholders of record as of the close of business on July 8, 2025.",
+        "reasons": []
+      },
+      {
+        "kind": "wrong_number",
+        "claim": "Term Loan Credit Agreements: On June 8, 2024, we terminated our existing term loan credit agreement that we entered into in fiscal 2023 and repaid the principal amount outstanding together with interest accrued up to the date of repayment.",
+        "reasons": []
+      }
+    ]
+  },
+  "verifier_hard": {
+    "n_cases": 30,
+    "tp": 10,
+    "fp": 9,
+    "fn": 5,
+    "tn": 6,
+    "precision": 0.526,
+    "recall": 0.667,
+    "f1": 0.588,
+    "accuracy": 0.533,
+    "errors": [
+      {
+        "claim": "Customer, partner or employee mistakes or misconduct could lead to improper access to Oracle Cloud Services.",
+        "gold_unsupported": false,
+        "note": "paraphrase",
+        "reasons": [
+          "only 64% of the claim's terms appear in the evidence"
+        ]
+      },
+      {
+        "claim": "Oracle Cloud Services have been accessed improperly by a contractor.",
+        "gold_unsupported": true,
+        "note": "possibility stated as fact",
+        "reasons": []
+      },
+      {
+        "claim": "A significant portion of NVIDIA's US-taxable income qualifies for preferential FDII treatment.",
+        "gold_unsupported": false,
+        "note": "paraphrase",
+        "reasons": [
+          "entity 'us-taxable' not mentioned in cited evidence"
+        ]
+      },
+      {
+        "claim": "Incorrect demand estimates for new use cases can make NVIDIA's revenue or supply volatile.",
+        "gold_unsupported": false,
+        "note": "paraphrase",
+        "reasons": [
+          "only 64% of the claim's terms appear in the evidence"
+        ]
+      },
+      {
+        "claim": "Citi builds some software in-house and also depends on third-party applications that can be exploited.",
+        "gold_unsupported": false,
+        "note": "paraphrase",
+        "reasons": [
+          "only 50% of the claim's terms appear in the evidence"
+        ]
+      },
+      {
+        "claim": "Citi develops all of its software in-house.",
+        "gold_unsupported": true,
+        "note": "overgeneralisation",
+        "reasons": []
+      },
+      {
+        "claim": "Acquisitions could hurt NVIDIA's ability to grow and could negatively affect its financial results.",
+        "gold_unsupported": false,
+        "note": "paraphrase",
+        "reasons": [
+          "only 67% of the claim's terms appear in the evidence"
+        ]
+      },
+      {
+        "claim": "Tesla's Gigafactory Shanghai is located in a seismically active region.",
+        "gold_unsupported": true,
+        "note": "attribute swapped between entities",
+        "reasons": []
+      },
+      {
+        "claim": "NVIDIA targets five markets, including Data Center and Gaming.",
+        "gold_unsupported": true,
+        "note": "count changed as a word",
+        "reasons": []
+      },
+      {
+        "claim": "He founded Oracle in June 1977 and was CEO until September 2014.",
+        "gold_unsupported": false,
+        "note": "paraphrase",
+        "reasons": [
+          "entity 'ceo' not mentioned in cited evidence"
+        ]
+      },
+      {
+        "claim": "A long US federal government shutdown could delay approvals and hurt Oracle's results.",
+        "gold_unsupported": false,
+        "note": "paraphrase",
+        "reasons": [
+          "only 67% of the claim's terms appear in the evidence"
+        ]
+      },
+      {
+        "claim": "A US federal government shutdown would speed up approvals and decision making.",
+        "gold_unsupported": true,
+        "note": "reversed effect",
+        "reasons": []
+      },
+      {
+        "claim": "Oracle usually charges a prepaid fee that is drawn down as customers consume OCI services.",
+        "gold_unsupported": false,
+        "note": "paraphrase",
+        "reasons": [
+          "only 55% of the claim's terms appear in the evidence"
+        ]
+      },
+      {
+        "claim": "Citi uses models to analyze and monitor the risks it takes on.",
+        "gold_unsupported": false,
+        "note": "paraphrase",
+        "reasons": [
+          "only 57% of the claim's terms appear in the evidence"
+        ]
+      }
+    ]
+  },
+  "numeric_qa": {
+    "n_questions": 171,
+    "routing_rate": 1.0,
+    "xbrl_route_accuracy": 1.0,
+    "retrieval_only_top3_contains_answer": 0.035,
+    "failures": []
+  },
+  "runtime_s": 1.9
+}
