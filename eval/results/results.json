@@ -11,7 +11,7 @@
       "hit@3": 0.917,
       "hit@5": 0.944,
       "mrr": 0.863,
-      "median_latency_ms": 3.2
+      "median_latency_ms": 3.9
     },
     "tfidf": {
       "hit@1": 0.833,
@@ -25,7 +25,7 @@
       "hit@3": 0.861,
       "hit@5": 0.917,
       "mrr": 0.847,
-      "median_latency_ms": 3.0
+      "median_latency_ms": 3.5
     },
     "scope_accuracy": 1.0,
     "per_question": [
@@ -401,5 +401,5 @@
     "retrieval_only_top3_contains_answer": 0.035,
     "failures": []
   },
-  "runtime_s": 1.9
+  "runtime_s": 2.1
 }
