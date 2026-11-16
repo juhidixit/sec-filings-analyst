@@ -74,6 +74,8 @@ class FactorChange:
     prev_risk_id: str | None = None
     body: str = ""
     prev_body: str = ""
+    #: (old, new) sentence pairs that were reworded rather than added/removed
+    edited: list[tuple[str, str]] = field(default_factory=list)
 
     def to_dict(self) -> dict[str, object]:
         return asdict(self)
@@ -92,7 +94,8 @@ class RiskDiff:
         return out
 
 
-def _sentence_diff(a: str, b: str) -> tuple[list[str], list[str]]:
+def _sentence_diff(a: str, b: str) -> tuple[list[str], list[str], list[tuple[str, str]]]:
+    """Sentence-level diff: (added, removed, edited pairs)."""
     sa, sb = split_sentences(a), split_sentences(b)
     sm = difflib.SequenceMatcher(a=sa, b=sb, autojunk=False)
     added: list[str] = []
@@ -104,7 +107,42 @@ def _sentence_diff(a: str, b: str) -> tuple[list[str], list[str]]:
             added.extend(sb[j1:j2])
     # Sentences that merely moved are not changes.
     moved = set(added) & set(removed)
-    return [s for s in added if s not in moved], [s for s in removed if s not in moved]
+    added = [s for s in added if s not in moved]
+    removed = [s for s in removed if s not in moved]
+    # A removed + added pair that is mostly the same words is an *edit*.
+    edited: list[tuple[str, str]] = []
+    for new in list(added):
+        best, score = None, 0.0
+        for old in removed:
+            r = difflib.SequenceMatcher(a=old.split(), b=new.split(), autojunk=False).ratio()
+            if r > score:
+                best, score = old, r
+        if best is not None and score >= EDIT_RATIO:
+            edited.append((best, new))
+            added.remove(new)
+            removed.remove(best)
+    return added, removed, edited
+
+
+EDIT_RATIO = 0.6
+
+
+def word_diff(old: str, new: str) -> list[tuple[str, str]]:
+    """Word-level diff as (op, text) runs with op in {"=", "+", "-"}."""
+    a, b = old.split(), new.split()
+    # Compare words without trailing punctuation so "costs" vs "costs," is not a change.
+    na = [w.rstrip(".,;:") for w in a]
+    nb = [w.rstrip(".,;:") for w in b]
+    out: list[tuple[str, str]] = []
+    for tag, i1, i2, j1, j2 in difflib.SequenceMatcher(a=na, b=nb, autojunk=False).get_opcodes():
+        if tag == "equal":
+            out.append(("=", " ".join(b[j1:j2])))
+        else:
+            if i2 > i1:
+                out.append(("-", " ".join(a[i1:i2])))
+            if j2 > j1:
+                out.append(("+", " ".join(b[j1:j2])))
+    return out
 
 
 def diff_risk_factors(
@@ -132,8 +170,8 @@ def diff_risk_factors(
         if i in matched_curr:
             j, s = matched_curr[i]
             p = prev[j]
-            added, removed = _sentence_diff(p.text, f.text)
-            status = "unchanged" if not added and not removed else "modified"
+            added, removed, edited = _sentence_diff(p.text, f.text)
+            status = "unchanged" if not (added or removed or edited) else "modified"
             changes.append(
                 FactorChange(
                     status,
@@ -148,6 +186,7 @@ def diff_risk_factors(
                     p.id,
                     f.body,
                     p.body,
+                    edited,
                 )
             )
         else:
@@ -189,8 +228,9 @@ def diff_risk_factors(
 
 
 def change_magnitude(c: FactorChange) -> int:
-    """Characters of text added plus removed - used to rank what changed most."""
-    return sum(len(s) for s in c.added_sentences) + sum(len(s) for s in c.removed_sentences)
+    """Characters of text added, removed or reworded - used to rank what changed most."""
+    edits = sum(len(t) for old, new in c.edited for op, t in word_diff(old, new) if op != "=")
+    return sum(len(s) for s in c.added_sentences) + sum(len(s) for s in c.removed_sentences) + edits
 
 
 def similarity_matrix(prev: list[RiskFactor], curr: list[RiskFactor]) -> np.ndarray:
