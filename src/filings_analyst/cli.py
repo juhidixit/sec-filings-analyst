@@ -22,6 +22,16 @@ def _fetch(args: argparse.Namespace) -> None:
             print(f"{ref.ticker} {ref.form} {ref.report_date} -> {path}")
 
 
+def _fetch_manifest(args: argparse.Namespace) -> None:
+    from .edgar import EdgarClient
+
+    client = EdgarClient()
+    for row in json.loads(Path(args.manifest).read_text()):
+        ref = client.find_filing(row["ticker"], row["report_date"], row["form"])
+        path = client.download(ref, Path(args.out))
+        print(f"{ref.ticker} {ref.form} {ref.report_date} {ref.accession} -> {path}")
+
+
 def _build(args: argparse.Namespace) -> None:
     from .corpus import process_filing, save_filing
 
@@ -77,6 +87,11 @@ def main(argv: list[str] | None = None) -> None:
     f.add_argument("--limit", type=int, default=2)
     f.add_argument("--out", default=str(RAW))
     f.set_defaults(func=_fetch)
+
+    fm = sub.add_parser("fetch-manifest", help="download the exact filings listed in a manifest")
+    fm.add_argument("manifest", nargs="?", default=str(ROOT / "data" / "manifest.json"))
+    fm.add_argument("--out", default=str(RAW))
+    fm.set_defaults(func=_fetch_manifest)
 
     b = sub.add_parser("build", help="parse raw HTML into the processed corpus")
     b.add_argument("--raw", default=str(RAW))

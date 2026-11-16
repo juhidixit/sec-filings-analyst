@@ -104,9 +104,16 @@ class EdgarClient:
                 break
         return out
 
+    def find_filing(self, ticker: str, report_date: str, form: str = "10-K") -> FilingRef:
+        """Locate the filing for one fiscal period (used to rebuild the exact corpus)."""
+        for ref in self.list_filings(ticker, form, limit=50):
+            if ref.report_date == report_date:
+                return ref
+        raise LookupError(f"No {form} for {ticker} with period ending {report_date}")
+
     def download(self, ref: FilingRef, out_dir: Path) -> Path:
         out_dir.mkdir(parents=True, exist_ok=True)
-        path = out_dir / f"{ref.ticker}_{ref.form}_{ref.report_date}.html"
+        path = out_dir / f"{ref.ticker}_{ref.form}_{ref.report_date}.html"  # ticker prefix used by build
         if not path.exists():
             path.write_bytes(self._get(ref.url).content)
         return path
