@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - run: pip install -e ".[app,dev]"
+      - name: Lint and type-check
+        run: |
+          ruff check src app eval tests
+          ruff format --check src app eval tests
+          mypy src
+      - name: Unit and integration tests
+        run: pytest --cov=filings_analyst --cov-report=term-missing
+      - name: Reproduce evaluation
+        run: |
+          python eval/run_eval.py > /dev/null
+          git diff --exit-code eval/results/results.md || (echo "eval results changed - re-run make eval and commit" && exit 1)
+
+  docker:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t sec-filings-analyst .
+      - name: Smoke test the API container
+        run: |
+          docker run -d -p 8000:8000 --name api sec-filings-analyst
+          for i in $(seq 1 20); do curl -fs localhost:8000/health && break; sleep 2; done
+          curl -fs -X POST localhost:8000/ask -H 'content-type: application/json' \
+            -d '{"question":"What was Tesla revenue in 2024?"}' | python -c "import json,sys; d=json.load(sys.stdin); assert d['route']=='structured', d"
