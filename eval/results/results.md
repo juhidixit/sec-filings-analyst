@@ -56,7 +56,7 @@ Accuracy **0.533** · precision 0.526 · recall 0.667 · F1 0.588 (TP 10, FP 9, 
 | Oracle usually charges a prepaid fee that is drawn down as customers consume OCI services. | supported | only 55% of the claim's terms appear in the evidence |
 | Citi uses models to analyze and monitor the risks it takes on. | supported | only 57% of the claim's terms appear in the evidence |
 
-## 3. Numeric questions (171 questions, 3 phrasings each)
+## 3. Numeric questions (171 questions: 57 facts × 3 phrasings)
 
 | Method | Correct |
 |---|---|

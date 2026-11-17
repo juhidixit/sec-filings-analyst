@@ -11,21 +11,21 @@
       "hit@3": 0.917,
       "hit@5": 0.944,
       "mrr": 0.863,
-      "median_latency_ms": 3.9
+      "median_latency_ms": 3.5
     },
     "tfidf": {
       "hit@1": 0.833,
       "hit@3": 0.861,
       "hit@5": 0.917,
       "mrr": 0.861,
-      "median_latency_ms": 3.3
+      "median_latency_ms": 3.5
     },
     "hybrid": {
       "hit@1": 0.806,
       "hit@3": 0.861,
       "hit@5": 0.917,
       "mrr": 0.847,
-      "median_latency_ms": 3.5
+      "median_latency_ms": 3.4
     },
     "scope_accuracy": 1.0,
     "per_question": [
@@ -401,5 +401,5 @@
     "retrieval_only_top3_contains_answer": 0.035,
     "failures": []
   },
-  "runtime_s": 2.1
+  "runtime_s": 2.2
 }

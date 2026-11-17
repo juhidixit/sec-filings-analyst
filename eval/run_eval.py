@@ -472,7 +472,7 @@ def render_md(r: dict) -> str:  # type: ignore[type-arg]
         lines.append(f"| {e['claim']} | {gold} | {why} |")
     lines += [
         "",
-        f"## 3. Numeric questions ({num['n_questions']} questions, 3 phrasings each)",
+        f"## 3. Numeric questions ({num['n_questions']} questions: {num['n_questions'] // 3} facts × 3 phrasings)",
         "",
         "| Method | Correct |",
         "|---|---|",
